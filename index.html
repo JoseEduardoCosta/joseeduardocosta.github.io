@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em construção...!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 150px;
+            height: 150px;
+            border: 20px solid rgba(0, 0, 0, 0.322);
+            border-top-color: aquamarine;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .load {
+            margin-top: 50px;
+            font-size: 3em;
+            font-family: monospace;
+            border-right: 4px solid black;
+            width: 11ch;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: digitando 2s steps(11) infinite, piscando 0.5s infinite step-end alternate;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes digitando {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes piscando {
+            70% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <div class="load">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
